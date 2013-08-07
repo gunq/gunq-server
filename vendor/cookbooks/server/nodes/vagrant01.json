@@ -1,0 +1,26 @@
+{
+  "rvm": {
+    "rubies"       : ["ruby-1.9.3-p392"],
+    "default_ruby" : "ruby-1.9.3-p392"
+  },
+
+  "mysql": {
+    "server_root_password": "test",
+    "server_repl_password": "test",
+    "server_debian_password": "test"
+  },
+
+  "nginx":{
+    "application" : "chef_rails_template",
+    "port" : 80
+  },
+
+  "run_list":[
+    "recipe[yum::epel]",
+    "recipe[rvm::system]",
+    "recipe[mysql::server]",
+    "recipe[nginx]",
+    "recipe[iptables]",
+    "recipe[nodejs]"
+  ]
+}

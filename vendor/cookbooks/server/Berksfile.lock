@@ -1,0 +1,50 @@
+{
+  "sources": {
+    "server": {
+      "path": "."
+    },
+    "rbenv": {
+      "locked_version": "1.5.0",
+      "git": "git://github.com/RiotGames/rbenv-cookbook.git",
+      "ref": "a60b19e5e5d40f3c6f9e547848f6cc4b1c60db92"
+    },
+    "nginx": {
+      "locked_version": "1.7.0"
+    },
+    "nodejs": {
+      "locked_version": "1.1.2"
+    },
+    "mongodb": {
+      "locked_version": "0.12.0",
+      "git": "git://github.com/edelight/chef-mongodb.git",
+      "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
+    },
+    "git": {
+      "locked_version": "2.5.2"
+    },
+    "dmg": {
+      "locked_version": "1.1.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.0"
+    },
+    "yum": {
+      "locked_version": "2.3.0"
+    },
+    "windows": {
+      "locked_version": "1.10.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.1.6"
+    },
+    "apt": {
+      "locked_version": "2.0.0"
+    },
+    "ohai": {
+      "locked_version": "1.1.10"
+    }
+  }
+}
