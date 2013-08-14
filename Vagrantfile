@@ -25,6 +25,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # using a specific IP.
   config.vm.network :private_network, ip: "192.168.33.10"
 
+  # IPv6とDNSでのネットワーク遅延対策で追記
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
+  end
+
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
@@ -108,6 +114,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "nodejs"
     chef.add_recipe "mongodb::10gen_repo"
     chef.add_recipe "mongodb"
+    chef.add_recipe "vim"
+    chef.add_recipe "zsh"
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
